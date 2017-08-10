@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0176986A1E78D1A500D2E817 /* LSSRulerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 017698691E78D1A500D2E817 /* LSSRulerView.m */; };
+		018778D51E6EB6D800FC5EB1 /* LSSRulerTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 018778D41E6EB6D800FC5EB1 /* LSSRulerTool.m */; };
 		01F1C5111E69702B0061F741 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F1C5101E69702B0061F741 /* main.m */; };
 		01F1C5141E69702C0061F741 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F1C5131E69702C0061F741 /* AppDelegate.m */; };
 		01F1C5171E69702C0061F741 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F1C5161E69702C0061F741 /* ViewController.m */; };
@@ -16,6 +18,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		017698681E78D1A500D2E817 /* LSSRulerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSSRulerView.h; sourceTree = "<group>"; };
+		017698691E78D1A500D2E817 /* LSSRulerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSSRulerView.m; sourceTree = "<group>"; };
+		018778D21E6EB69D00FC5EB1 /* LSSRulerConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSSRulerConst.h; sourceTree = "<group>"; };
+		018778D31E6EB6D800FC5EB1 /* LSSRulerTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSSRulerTool.h; sourceTree = "<group>"; };
+		018778D41E6EB6D800FC5EB1 /* LSSRulerTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSSRulerTool.m; sourceTree = "<group>"; };
 		01F1C50C1E69702B0061F741 /* LSSRulerCollection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LSSRulerCollection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01F1C5101E69702B0061F741 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		01F1C5121E69702B0061F741 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -58,6 +65,7 @@
 		01F1C50E1E69702B0061F741 /* LSSRulerCollection */ = {
 			isa = PBXGroup;
 			children = (
+				01F1C5261E6970480061F741 /* LSSRulerView */,
 				01F1C5121E69702B0061F741 /* AppDelegate.h */,
 				01F1C5131E69702C0061F741 /* AppDelegate.m */,
 				01F1C5151E69702C0061F741 /* ViewController.h */,
@@ -77,6 +85,18 @@
 				01F1C5101E69702B0061F741 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		01F1C5261E6970480061F741 /* LSSRulerView */ = {
+			isa = PBXGroup;
+			children = (
+				017698681E78D1A500D2E817 /* LSSRulerView.h */,
+				017698691E78D1A500D2E817 /* LSSRulerView.m */,
+				018778D31E6EB6D800FC5EB1 /* LSSRulerTool.h */,
+				018778D41E6EB6D800FC5EB1 /* LSSRulerTool.m */,
+				018778D21E6EB69D00FC5EB1 /* LSSRulerConst.h */,
+			);
+			name = LSSRulerView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,6 +130,7 @@
 				TargetAttributes = {
 					01F1C50B1E69702B0061F741 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = E8XN8F5354;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -151,7 +172,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				01F1C5171E69702C0061F741 /* ViewController.m in Sources */,
+				018778D51E6EB6D800FC5EB1 /* LSSRulerTool.m in Sources */,
 				01F1C5141E69702C0061F741 /* AppDelegate.m in Sources */,
+				0176986A1E78D1A500D2E817 /* LSSRulerView.m in Sources */,
 				01F1C5111E69702B0061F741 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +295,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = E8XN8F5354;
 				INFOPLIST_FILE = LSSRulerCollection/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.co-insight.LSSRulerCollection";
@@ -283,6 +307,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = E8XN8F5354;
 				INFOPLIST_FILE = LSSRulerCollection/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.co-insight.LSSRulerCollection";
@@ -309,6 +334,7 @@
 				01F1C5251E69702C0061F741 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
