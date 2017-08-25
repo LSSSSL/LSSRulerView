@@ -1,6 +1,6 @@
 # LSSRulerView
 
-![Ruller](https://img.shields.io/badge/Ruller-1.0.0-ff69b4.svg)
+[![Ruller](https://img.shields.io/badge/Ruller-1.0.0-ff69b4.svg)](https://www.baidu.com)
 
 UICollectionView定多功能刻度尺  
 适用视频播放进度尺、度量尺子
