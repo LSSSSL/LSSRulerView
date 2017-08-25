@@ -1,4 +1,7 @@
 # LSSRulerView
+
+![Ruller](https://img.shields.io/badge/Ruller-1.0.0-ff69b4.svg)
+
 UICollectionView定多功能刻度尺  
 适用视频播放进度尺、度量尺子
 通过设置多个属性改变样式、使用捏合手势放大缩小刻度值等
