@@ -20,3 +20,53 @@
 
 ## 使用
 1. 所有你需要做的就是把Class文件导入到您的项目,并添加#import "LSSRulerView.h"、#import "LSSRulerTool.h"的类将使用它。
+2. 实例化 LSSRulerView 类、 遵循代理、设置属性、根据个人需求实现代理方法。
+
+## 代理\方法解释
+###  代理触及方法
+```
+/**
+ *  代理获取尺子当前指向的值
+ *
+ *  @param value 尺子当前指向的值
+ */
+- (void)zyy_rulerViewCurrentValue:(NSString *)value;
+/**
+ *  代理获取尺子当前指向的值
+ *
+ *  @param value     尺子当前指向的值
+ *  @param rulerView ZYYRulerView
+ */
+- (void)zyy_rulerViewCurrentValue:(NSString*)value rulerView:(LSSRulerView *)rulerView;
+/**
+ *  当尺子滑动停止时触及的方法
+ *
+ *  @param value 尺子当前指向的值
+ */
+- (void)zyy_StopRulerViewCurrentValue:(NSString *)value;
+
+```
+### 方法调用
+```
+/**
+ *  更改样式之类的属性后，需要调用reloadData才能生效；有属性改变就要调用此方法
+ */
+- (void)reloadData;
+/**
+ *  方法调用传入数据数组
+ *
+ *  @param dataArr 视频时间数组集合  RulerTool数据模型的集合
+ *
+ */
+-(void)loadDataWith:(NSArray *)dataArr;
+
+/**
+ *   传入某个视频时间   1.跳到该时间  2.返回是否存在视频
+ *
+ *  @param time   某时间     格式   yyyy／MM／dd HH:mm:ss
+ 
+ */
+-(BOOL)sendTheVideoTime:(NSString *)time;
+
+```
+
