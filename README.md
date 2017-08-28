@@ -30,8 +30,7 @@
     View.rulerTime = 12;
     View.rulerStartTime =@"2017/3/1 00:00:00"; rulerStartTime  默认从最近8小时开始
     View.rulerEndTime = @"2017/3/05 00:00:00";
-```
-```
+
 #pragma mark - 视频数据数组模型
 @property(nonatomic,copy)NSString *startTime;//视频开始时间
 @property(nonatomic,copy)NSString *endTime;//视频结束时间
@@ -107,4 +106,5 @@
     }
 }
   ```
-  
+  ```
+
