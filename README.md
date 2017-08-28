@@ -5,6 +5,7 @@
 1. UICollectionView定多样式刻度尺、适用视频播放进度尺、度量尺
 2. 分段设置区域位置、区域色彩、放大缩小刻度值
 3. 自动按属性刻度滚动尺标、定位具体时间
+4. 若传入视频数据，可根据视频始末时间判断该视频是否存在于某个时间
 
 ![image](https://github.com/LSSSSL/LSSRulerView/blob/master/%20Image/img.gif)
 
@@ -44,7 +45,6 @@
  *  @param value 尺子当前指向的值
  */
 - (void)zyy_StopRulerViewCurrentValue:(NSString *)value;
-
 ```
 ### 方法调用
 ```
@@ -67,6 +67,28 @@
  
  */
 -(BOOL)sendTheVideoTime:(NSString *)time;
-
 ```
-
+##  注意
+  1.有属性改变一定要调用此方法  - (void)reloadData; 如 :[View reloadData]
+  2.自动滚动刻度尺克自行加入 时间控制器 NSTimer 如：
+   ```
+   timer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                             target:self
+                                           selector:@selector(printString)
+                                           userInfo:nil
+                                            repeats:true];
+    
+    -(void)printString{
+    i++;//测试随便给的值
+    if (i<10) {
+        NSString *timeS = [NSString stringWithFormat:@"2017/03/02 12:50:3%d",i];
+        BOOL is = [View sendTheVideoTime:timeS]; 
+        if (is) {
+            NSLog(@"时间存在");
+        }else{
+            NSLog(@"时间不存在");
+        }
+    }
+}
+  ```
+  
