@@ -14,9 +14,9 @@
 * ARC
 
 ## 文件介绍
-1.LSSRulerView   主类 主要的刻度尺逻辑功能的实现
-2.LSSRulerTool 改类包含 视频数据数组模型定义(视频播放用)、Date Time 函数的集合
-3.LSSRulerConst.h 基本使用宏的定义
+1. LSSRulerView   主类 主要的刻度尺逻辑功能的实现
+2. LSSRulerTool 改类包含 视频数据数组模型定义(视频播放用)、Date Time 函数的集合
+3. LSSRulerConst.h 基本使用宏的定义
 
 ## 使用
-1.所有你需要做的就是把Class文件导入到您的项目,并添加#import "LSSRulerView.h"、#import "LSSRulerTool.h"的类将使用它。
+1. 所有你需要做的就是把Class文件导入到您的项目,并添加#import "LSSRulerView.h"、#import "LSSRulerTool.h"的类将使用它。
