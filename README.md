@@ -36,8 +36,8 @@
 @property(nonatomic,copy)NSString *endTime;//视频结束时间
 @property(nonatomic,copy)NSString *NvrUrl;//视频地址
 ```
-## 代理\方法解释
-###  代理触及方法
+### 代理\方法解释
+####  代理触及方法
 ```
 /**
  *  代理获取尺子当前指向的值
@@ -59,7 +59,7 @@
  */
 - (void)zyy_StopRulerViewCurrentValue:(NSString *)value;
 ```
-### 方法调用
+#### 方法调用
 ```
 /**
  *  更改样式之类的属性后，需要调用reloadData才能生效；有属性改变就要调用此方法
@@ -106,5 +106,3 @@
     }
 }
   ```
-  ```
-
