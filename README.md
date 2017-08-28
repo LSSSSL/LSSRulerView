@@ -20,6 +20,13 @@
 2. LSSRulerTool 改类包含 视频数据数组模型定义(视频播放用)、Date Time 函数的集合
 3. LSSRulerConst.h 基本使用宏的定义
 
+### 视频数据数组模型
+```
+@property(nonatomic,copy)NSString *startTime;//视频开始时间
+@property(nonatomic,copy)NSString *endTime;//视频结束时间
+@property(nonatomic,copy)NSString *NvrUrl;//视频地址
+```
+
 ## 调用使用
 1. 所有你需要做的就是把Class文件导入到您的项目,并添加#import "LSSRulerView.h"、#import "LSSRulerTool.h"的类将使用它。
 2. 实例化 LSSRulerView 类、 遵循代理、设置属性、根据个人需求实现代理方法。
@@ -31,12 +38,6 @@
     View.rulerStartTime =@"2017/3/1 00:00:00"; rulerStartTime  默认从最近8小时开始
     View.rulerEndTime = @"2017/3/05 00:00:00";
 ```
-### 视频数据数组模型
-
-@property(nonatomic,copy)NSString *startTime;//视频开始时间
-@property(nonatomic,copy)NSString *endTime;//视频结束时间
-@property(nonatomic,copy)NSString *NvrUrl;//视频地址
-
 ### 代理\方法解释
 ####  代理触及方法
 ```
