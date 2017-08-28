@@ -1,5 +1,6 @@
 # LSSRulerView
 [![Ruller](https://img.shields.io/badge/Ruller-1.0.0-ff69b4.svg)](https://github.com/LSSSSL/LSSRulerView)
+[![Author](https://img.shields.io/badge/author-lssssl-yellowgreen.svg)](https://github.com/LSSSSL/LSSRulerView)
 
 ## 功能描述
 1. UICollectionView定多样式刻度尺、适用视频播放进度尺、度量尺
