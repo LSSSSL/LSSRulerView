@@ -20,7 +20,7 @@
 2. LSSRulerTool 改类包含 视频数据数组模型定义(视频播放用)、Date Time 函数的集合
 3. LSSRulerConst.h 基本使用宏的定义
 
-### 视频数据数组模型
+### 视频数据模型
 ```
 @property(nonatomic,copy)NSString *startTime;//视频开始时间
 @property(nonatomic,copy)NSString *endTime;//视频结束时间
