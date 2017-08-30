@@ -47,6 +47,32 @@
     [CoustomRulerView reloadData];
     [CoustomRulerView GoTheTime:@"2017/3/01 12:30:25"];
 ```
+##  注意
+####  有属性改变一定要调用此方法  - (void)reloadData;
+ ```
+  如 :[View reloadData]
+ ```
+#### 自动滚动刻度尺克自行加入 时间控制器 NSTimer 如：
+  ```
+   timer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                             target:self
+                                           selector:@selector(printString)
+                                           userInfo:nil
+                                            repeats:true];
+    
+    -(void)printString{
+    i++;//测试随便给的值
+    if (i<10) {
+        NSString *timeS = [NSString stringWithFormat:@"2017/03/02 12:50:3%d",i];
+        BOOL is = [View sendTheVideoTime:timeS]; 
+        if (is) {
+            NSLog(@"时间存在");
+        }else{
+            NSLog(@"时间不存在");
+        }
+    }
+}
+  ```
 ### 代理\方法解释
 ####  代理触及方法
 ```
@@ -100,29 +126,3 @@
  */
 -(void)GoTheTime:(NSString *)time;
 ```
-##  注意
-####  有属性改变一定要调用此方法  - (void)reloadData;
- ```
-  如 :[View reloadData]
- ```
-#### 2. 自动滚动刻度尺克自行加入 时间控制器 NSTimer 如：
-  ```
-   timer = [NSTimer scheduledTimerWithTimeInterval:1.0
-                                             target:self
-                                           selector:@selector(printString)
-                                           userInfo:nil
-                                            repeats:true];
-    
-    -(void)printString{
-    i++;//测试随便给的值
-    if (i<10) {
-        NSString *timeS = [NSString stringWithFormat:@"2017/03/02 12:50:3%d",i];
-        BOOL is = [View sendTheVideoTime:timeS]; 
-        if (is) {
-            NSLog(@"时间存在");
-        }else{
-            NSLog(@"时间不存在");
-        }
-    }
-}
-  ```
