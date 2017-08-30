@@ -179,6 +179,7 @@
     self.currentValue = 0;
     self.backgroundColor = self.rulerBackgroundColor;
     self.maxValue = [self calculateTheScaleValue];//最大格数  默认600/5格      ------默认为最近8小时
+    self.markViewColor = [UIColor whiteColor];
 }
 #pragma mark-计算开始时间与结束时间之间的差值 需要多少item
 -(NSInteger)calculateTheScaleValue{
@@ -256,8 +257,8 @@
 #pragma mark -添加尺子标示
     self.markView = [[LSSRulerMarkView alloc] initWithFrame:CGRectMake((self.bounds.size.width-1) / 2, 0, 1, self.bounds.size.height)];
     self.markView.translatesAutoresizingMaskIntoConstraints = NO;
-    self.markView.markColor = self.rulerLineColor;
-    self.markView.backgroundColor = self.rulerLineColor;
+    self.markView.markColor = self.markViewColor;
+    self.markView.backgroundColor = self.markViewColor;
     [self addSubview:self.markView];
     centerPointX =_collectionView.bounds.size.width/ 2;
 #pragma mark -添加视频片段
@@ -408,6 +409,26 @@
         }
     }
 }
+
+#pragma mark -传入时间 定位到该时间
+-(void)GoTheTime:(NSString *)time{
+  
+    NSDate *currentDate = [LSSRulerTool getDateByTimeStr:time];
+    NSString *old1 =[[NSUserDefaults standardUserDefaults]objectForKey:TheRulerStartTimeValue];
+    NSDate *olddate = [LSSRulerTool getDateByTimeStr:old1];
+    NSTimeInterval start2= [currentDate timeIntervalSince1970]*1;
+    NSTimeInterval old2 = [olddate timeIntervalSince1970]*1;
+    //计算每一秒的宽度
+    float spaceX = (float)self.rulerSpacing/self.rulerTime;
+    //计算起始值X
+    NSTimeInterval valueX = start2 - old2;
+    int secondX = (int)valueX;//秒 //与过去时间对比
+    float withX  = spaceX*secondX;
+    CGFloat offsetX = withX ;
+    [self.collectionView setContentOffset:CGPointMake(offsetX-centerPointX, 0) animated:YES];
+    self.currentValue = offsetX;
+}
+
 #pragma mark collectionView代理方法
 //返回section个数
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
