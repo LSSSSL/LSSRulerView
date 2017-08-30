@@ -82,6 +82,15 @@
  
  */
 -(BOOL)sendTheVideoTime:(NSString *)time;
+
+/**
+ *   传入某个时间   1.跳到该时间
+ *
+ *  @param time   某时间     格式   yyyy／MM／dd HH:mm:ss
+ 
+ */
+-(void)GoTheTime:(NSString *)time;
+
 ```
 ##  注意
   1. 有属性改变一定要调用此方法  - (void)reloadData; 如 :[View reloadData]
