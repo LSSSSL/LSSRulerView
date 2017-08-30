@@ -31,12 +31,23 @@
 1. 所有你需要做的就是把Class文件导入到您的项目,并添加#import "LSSRulerView.h"、#import "LSSRulerTool.h"的类将使用它。
 2. 实例化 LSSRulerView 类、 遵循代理、设置属性、根据个人需求实现代理方法。
 ```
-    LSSRulerView *View = [[LSSRulerView alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, 60)];
-    View.delegate =self;
-    //一般改变这些属性
-    View.rulerTime = 12;
-    View.rulerStartTime =@"2017/3/1 00:00:00"; rulerStartTime  默认从最近8小时开始
-    View.rulerEndTime = @"2017/3/05 00:00:00";
+    //初始化-方式
+    DefaultRulerView = [[LSSRulerView alloc] initWithFrame:CGRectMake(0, 120, self.view.frame.size.width, 60)];
+    DefaultRulerView.delegate =self;
+    DefaultRulerView.tag  = 1;
+    [self.view addSubview:DefaultRulerView];
+    [DefaultRulerView reloadData];
+    
+    //属性设置
+    CoustomRulerView.rulerTime = 720;
+    CoustomRulerView.rulerLineColor = [UIColor blackColor];
+    CoustomRulerView.rulerBackgroundColor = [UIColor whiteColor];
+    CoustomRulerView.rulerStartTime =@"2017/3/1 00:00:00";
+    CoustomRulerView.rulerEndTime = @"2017/3/05 00:00:00";
+    CoustomRulerView.markViewColor =[UIColor redColor];
+    [CoustomRulerView reloadData];
+    [CoustomRulerView GoTheTime:@"2017/3/01 12:30:25"];
+   
 ```
 ### 代理\方法解释
 ####  代理触及方法
