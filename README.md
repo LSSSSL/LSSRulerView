@@ -101,11 +101,11 @@
 -(void)GoTheTime:(NSString *)time;
 ```
 ##  注意
-  ####  有属性改变一定要调用此方法  - (void)reloadData;
+####  有属性改变一定要调用此方法  - (void)reloadData;
  ```
   如 :[View reloadData]
  ```
-  #### 2. 自动滚动刻度尺克自行加入 时间控制器 NSTimer 如：
+#### 2. 自动滚动刻度尺克自行加入 时间控制器 NSTimer 如：
   ```
    timer = [NSTimer scheduledTimerWithTimeInterval:1.0
                                              target:self
