@@ -78,20 +78,17 @@
 ```
 /**
  *  代理获取尺子当前指向的值
- *
  *  @param value 尺子当前指向的值
  */
 - (void)zyy_rulerViewCurrentValue:(NSString *)value;
 /**
  *  代理获取尺子当前指向的值
- *
  *  @param value     尺子当前指向的值
  *  @param rulerView ZYYRulerView
  */
 - (void)zyy_rulerViewCurrentValue:(NSString*)value rulerView:(LSSRulerView *)rulerView;
 /**
  *  当尺子滑动停止时触及的方法
- *
  *  @param value 尺子当前指向的值
  */
 - (void)zyy_StopRulerViewCurrentValue:(NSString *)value;
@@ -104,7 +101,6 @@
 - (void)reloadData;
 /**
  *  方法调用传入数据数组
- *
  *  @param dataArr 视频时间数组集合  RulerTool数据模型的集合
  *
  */
@@ -112,7 +108,6 @@
 
 /**
  *   传入某个视频时间   1.跳到该时间  2.返回是否存在视频
- *
  *  @param time   某时间     格式   yyyy／MM／dd HH:mm:ss
  
  */
@@ -120,7 +115,6 @@
 
 /**
  *   传入某个时间   1.跳到该时间
- *
  *  @param time   某时间     格式   yyyy／MM／dd HH:mm:ss
  
  */
